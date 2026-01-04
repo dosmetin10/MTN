@@ -1,0 +1,29 @@
+[project]
+name = "mtn-backend"
+version = "0.1.0"
+description = "MTN Enerji Mühendislik için muhasebe ve stok takip backend"
+authors = [{name = "MTN"}]
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.111.0",
+  "uvicorn[standard]>=0.30.0",
+  "sqlmodel>=0.0.16",
+  "pydantic-settings>=2.3.4"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+  "httpx>=0.26.0",
+  "ruff>=0.5.0"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
